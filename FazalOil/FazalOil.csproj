@@ -196,6 +196,7 @@
     <Content Include="less\sb-admin-2.less" />
     <Content Include="less\variables.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\js\bootstrap.js" />
@@ -350,7 +351,7 @@
     <Content Include="vendor\morrisjs\morris.min.js" />
     <Content Include="vendor\raphael\raphael.js" />
     <Content Include="vendor\raphael\raphael.min.js" />
-    <None Include="Views\Main\Index1.cshtml" />
+    <Content Include="Views\Main\addproduct.cshtml" />
     <None Include="Views\Main\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

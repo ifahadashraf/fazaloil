@@ -14,5 +14,10 @@ namespace FazalOil.Controllers
         {
             return View();
         }
+
+        public ActionResult AddProduct()
+        {
+            return View();
+        }
 	}
 }
