@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Al Fazal Oil Agency</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -48,7 +48,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Fazail Oil Store</a>
+                <a class="navbar-brand" href="/Main/Index">Al Fazal Oil Agency</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -277,7 +277,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="/Main/Index"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Products<span class="fa arrow"></span></a>
@@ -286,83 +286,18 @@
                                     <a href="/Main/AddProduct">Add product</a>
                                 </li>
                                 <li>
-                                    <a href="morris.html">Update product</a>
+                                    <a href="/Main/UpdateProduct">Update product</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Invoice</a>
-                        </li>
-                    <!--<li>
-                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                            <a href="/Main/Stock"><i class="fa fa-th-list fa-fw"></i> Stock</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">Panels and Wells</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">Buttons</a>
-                                </li>
-                                <li>
-                                    <a href="notifications.html">Notifications</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html"> Icons</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Grid</a>
-                                </li>
-                            </ul>
-                            
+                            <a href="/Main/Invoice"><i class="fa fa-table fa-fw"></i> Invoice</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Second Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    
-                                </li>
-                            </ul>
-                            
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="blank.html">Blank Page</a>
-                                </li>
-                                <li>
-                                    <a href="login.html">Login Page</a>
-                                </li>
-                            </ul>
-                            
-                        </li>-->
+                
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -372,36 +307,178 @@
 
         <div id="page-wrapper">
             <div class="row">
-                <div class="col-lg-12">
-                    <h2>Add Product</h2>
+                <div class="page-header">
+                        <h1>Al Fazil Oil Agency</h1>                    
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-10">
-                    <form role="form">
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Enter Product">
+
+                <div class="row">
+                        
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                   <label>Sale Person:</label>
+                                   <select id="selectSalePerson" class="form-control">
+                                       <option>Bilal</option>
+                                       <option>Awais</option>
+                                   </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Customer Name:</label>
+                                    <input id="txtCustomerName" class="form-control" placeholder="Customer Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="form-group">
+                                    <label>Vehicle Details:</label>
+                                    <button type="button" class="btn btn-success">+ Add Vehicle Details</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">    
+                                <div class="form-group">
+                                    <label>Search:</label>
+                                    <button type="button" class="btn btn-default">Search Invoices</button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Enter Product">
+
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <form role="form">
+                                            <div class="form-group input-group">
+                                                <span class="input-group-addon"><b>Search Product: </b></span>
+                                                <input type="text" class="form-control" placeholder="Product Name">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="row">
+                                      <div class="panel-body">
+                                        <div class="table-responsive table-bordered">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-lg-1">Sr#</th>
+                                                        <th class="col-sm-6">Product Name</th>
+                                                        <th class="col-sm-2">Rate</th>
+                                                        <th class="col-lg-1">Quantity</th>
+                                                        <th class="col-lg-1">Total</th>
+                                                        <th class="col-lg-1">Delete</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Shell Advance</td>
+                                                        <td><input class="form-control"></td>
+                                                        <td><input class="form-control"></td>
+                                                        <td>1080</td>
+                                                        <td><button type="button" class="btn btn-link">Delete</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Zic A+</td>
+                                                        <td><input class="form-control"></td>
+                                                        <td><input class="form-control"></td>
+                                                        <td>2300</td>
+                                                        <td><button type="button" class="btn btn-link">Delete</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Air Filter</td>
+                                                        <td><input class="form-control"></td>
+                                                        <td><input class="form-control"></td>
+                                                        <td>400</td>
+                                                        <td><button type="button" class="btn btn-link">Delete</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Shell Rimula</td>
+                                                        <td><input class="form-control"></td>
+                                                        <td><input class="form-control"></td>
+                                                        <td>1080</td>
+                                                        <td><button type="button" class="btn btn-link">Delete</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                       </div>                                      
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-group">
+                                                <label>Payment Method:</label>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="radioPayment" id="radioPayment" value="radioPaymentCash" checked>Cash
+                                                    </label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="radioPayment" id="radioPayment" value="radioPaymentCredit">Credit
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-7">
+                                            <div class="form-group">
+                                                <label>Comments:</label>
+                                                <textarea class="form-control" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-1">
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label class="checkbox-inline">
+                                                        <input type="checkbox" checked>Print Invoice
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="form-group">
+                                                    <label>No. of Copies:</label>
+                                                    <input type="text" class="form-control">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-1"></div>
+                            
+                                <div class="col-lg-2">
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>Net Total: </label>
+                                            <textarea id="txtNetTotal" class="form-control" rows="2" disabled></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>Invoice </label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>Cash: </label>
+                                            <textarea id="txtCash" class="form-control" rows="2"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <label>Balance: </label>
+                                            <input type="number" id="txtBalance" class="form-control" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Enter Product">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Enter Product">
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" placeholder="Enter Product">
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit Button</button>
-                        <button type="reset" class="btn btn-default">Reset Button</button>
-                    </form>
+                    
                 </div>
-                <div class="col-lg-1"></div>
-            </div>
-            
         </div>
         <!-- /#page-wrapper -->
 
@@ -425,8 +502,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="~/dist/js/sb-admin-2.js"></script>
 
-    <script src="~/Scripts/custom.js"></script>
+   <script src="~/Scripts/custom.js"></script>
 
+        
 </body>
 
 </html>

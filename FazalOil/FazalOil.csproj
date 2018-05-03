@@ -351,7 +351,7 @@
     <Content Include="vendor\morrisjs\morris.min.js" />
     <Content Include="vendor\raphael\raphael.js" />
     <Content Include="vendor\raphael\raphael.min.js" />
-    <Content Include="Views\Main\addproduct.cshtml" />
+    <Content Include="Views\Main\AddProduct.cshtml" />
     <None Include="Views\Main\Index.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -368,6 +368,9 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Main\Invoice.cshtml" />
+    <Content Include="Views\Main\Stock.cshtml" />
+    <Content Include="Views\Main\UpdateProduct.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -404,6 +407,11 @@
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>
+    <MonoDevelop>
+      <Properties>
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="True" />
+      </Properties>
+    </MonoDevelop>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

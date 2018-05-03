@@ -19,5 +19,20 @@ namespace FazalOil.Controllers
         {
             return View();
         }
-	}
+
+        public ActionResult Stock()
+        {
+            return View();
+        }
+
+        public ActionResult Invoice()
+        {
+            return View();
+        }
+
+        public ActionResult UpdateProduct()
+        {
+            return View();
+        }
+    }
 }
