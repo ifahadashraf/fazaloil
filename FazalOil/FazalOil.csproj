@@ -110,6 +110,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Content\modal\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -371,6 +372,9 @@
     <Content Include="Views\Main\Invoice.cshtml" />
     <Content Include="Views\Main\Stock.cshtml" />
     <Content Include="Views\Main\UpdateProduct.cshtml" />
+    <Content Include="Content\modal\bootstrap.min.css" />
+    <Content Include="Content\modal\bootstrap.min.js" />
+    <Content Include="Content\modal\jquery.min.js" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
