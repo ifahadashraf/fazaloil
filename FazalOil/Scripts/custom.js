@@ -1,4 +1,12 @@
-﻿function supllier() {
+﻿//***********************GLOBAL VARIABLES***************************//
+
+var BASE_URL = "../../";
+var ADD_PRODUCT = "Data/AddProduct";
+
+//***********************END GLOBAL VARIABLES***********************//
+
+
+function supllier() {
     var location = document.getElementById('selectLocation').value;
     if(location === "Depot")
     {
@@ -19,7 +27,7 @@ function calculateLitres() {
 }
 
 function categories() {
-    var category = document.getElementById('selectCategory').value;
+    var category = $("#selectCategory option:selected").text();
     if(category === "Oil")
     {
         document.getElementById('txtQuantity').disabled = true;
@@ -51,4 +59,70 @@ function totalPrice() {
         var result = canPrice * quantity;
         totalPrice1.value = result;
     }
+}
+
+function saveProduct() {
+
+    var productName = $("#txtProductName").val();
+    var canSize = $("#txtCanSize").val();
+    var totalCans = $("#txtNoOfCans").val();
+    var totalLiters = $("#txtNoOfLitres").val();
+    var quantity = $("#txtQuantity").val();
+    var brandID = $("#selectBrand").val();
+    var purchasingPrice = $("#txtPrice").val();
+    var dropoffID = $("#selectLocation").val();
+    var supplierID = $("#selectSupplier").val();
+    var dateOfPurchase = $("#datePurchase").val();
+
+    var category = $("#selectCategory").val();
+
+    var json = ""
+
+    if (category == "1") {
+        json = {
+            "ProductName": productName,
+            "CanSize": canSize,
+            "totalCans": totalCans,
+            "totalLiters":totalLiters,
+            "BrandID": brandID,
+            "PurchasingPrice": purchasingPrice,
+            "DropoffID": dropoffID,
+            "SupplierID": supplierID,
+            "DateOfPurchase": dateOfPurchase
+        }
+    }
+    else {
+        json = {
+            "ProductName": productName,
+            "Quantity":quantity,
+            "BrandID": brandID,
+            "PurchasingPrice": purchasingPrice,
+            "DropoffID": dropoffID,
+            "SupplierID": supplierID,
+            "DateOfPurchase": dateOfPurchase
+        }
+    }
+    
+
+    $.ajax({
+        url: BASE_URL + ADD_PRODUCT,
+        type: "POST",
+        contentType: "application/json; charset=utf-8",
+        data: JSON.stringify(json),
+        success:function(data){
+            $("#alertdiv").html('<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Successfully added<a href="#" class="alert-link">Status</a>.</div>');
+            $('input').val('');
+            $('option').attr('selected', false);
+            setTimeout(
+              function () {
+                  //do something special
+                  $("#alertdiv").html('');
+              }, 3000);
+
+            
+        },
+        error:function(err){
+
+        }
+    });
 }

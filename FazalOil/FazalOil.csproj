@@ -39,11 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -109,17 +114,49 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Content\modal\" />
+    <Folder Include="Views\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApiCalls.cs" />
+    <Compile Include="Models\Dropoff.cs">
+      <DependentUpon>FazilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FazilModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FazilModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FazilModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FazilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FazilModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FazilModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>FazilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\SaleInvoice.cs">
+      <DependentUpon>FazilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SaleItem.cs">
+      <DependentUpon>FazilModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SaleType.cs">
+      <DependentUpon>FazilModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,6 +184,16 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="js\sb-admin-2.js" />
+    <Content Include="Models\FazilModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FazilModel.edmx</DependentUpon>
+      <LastGenOutput>FazilModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\FazilModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FazilModel.edmx</DependentUpon>
+      <LastGenOutput>FazilModel.cs</LastGenOutput>
+    </Content>
     <Content Include="pages\blank.html" />
     <Content Include="pages\buttons.html" />
     <Content Include="pages\flot.html" />
@@ -196,7 +243,15 @@
     <Content Include="less\mixins.less" />
     <Content Include="less\sb-admin-2.less" />
     <Content Include="less\variables.less" />
+    <EntityDeploy Include="Models\FazilModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FazilModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FazilModel.edmx.diagram">
+      <DependentUpon>FazilModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\calls.js" />
     <Content Include="Scripts\custom.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -376,7 +431,9 @@
     <Content Include="Content\modal\bootstrap.min.js" />
     <Content Include="Content\modal\jquery.min.js" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

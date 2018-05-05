@@ -307,126 +307,131 @@
 
         <div id="page-wrapper">
             <div class="row">
-                <div class="page-header">
-                        <h1>Add Product</h1>                    
+                <div class="col-lg-6">
+                    <div class="page-header">
+                        <h1>Add Product</h1>
+                    </div>
+                </div>
+                <div id="alertdiv" class="col-lg-6">
                 </div>
             </div>
-
-                
             <div class="row">
                 <div class="col-lg-1"></div>
                   <div class="col-lg-10">
-                    <form role="form">
-
-                      <div class="row">             
-                        <div class="col-lg-4">
+                    <div class="row">             
+                        <div class="col-lg-3">
                             <div class="form-group">
-                               <label>Location:</label>
-                               <select id="selectLocation" onchange="supllier()" class="form-control">
-                                 <option>Shop</option>
-                                 <option>Depot</option>
+                                <label>Location:</label>
+                                <select id="selectLocation" onchange="supllier()" class="form-control">
+                                    <option value="1">Shop</option>
+                                    <option>Depot</option>
                                 </select>
                             </div>
                         </div>                       
-                        <div class="col-lg-4">                                
+                        <div class="col-lg-3">
                             <div class="form-group">
-                               <label>Supplier:</label>
-                               <select id="selectSupplier" class="form-control">
-                                 <option>Direct</option>
-                                 <option>Depot</option>
+                                <label>Supplier:</label>
+                                <select id="selectSupplier" class="form-control">
+                                    <option value="1">Direct</option>
+                                    <option>Depot</option>
                                 </select>
                             </div>
-                         </div>
-                         <div class="col-lg-4">
-                            <div class="form-group">
-                               <label>Category:</label>
-                               <select id="selectCategory" onchange="categories()" class="form-control">
-                                 <option>Oil</option>
-                                 <option>Filters</option>
-                                 <option>Others</option>
-                                </select>
-                            </div>
-                         </div>   
-                       </div>   
-
-                        <div class="row"> 
-                            <div class="col-lg-6"> 
-                                <div class="form-group">
-                                    <label>Product Name: </label>
-                                    <input id="txtProductName" class="form-control" placeholder="i.e. Zic Hiflo" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">   
-                                <div class="form-group">
-                                   <label>Brand Name:</label>
-                                   <select id="selectBrand" class="form-control">
-                                       <option>-Brand-</option>
-                                       <option>Zic</option>
-                                       <option>Shell</option>
-                                       <option>Toyota</option>
-                                       <option>Honda</option>
-                                       <option>Halloween</option>
-                                       <option>Other</option>
-                                   </select>
-                                </div>
-                             </div>
                         </div>
-                            
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Can Size: </label>
-                                    <input type="number" min="1" id="txtCanSize" class="form-control" placeholder="Can Size i.e 4L">
-                                </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Category:</label>
+                                <select id="selectCategory" onchange="categories()" class="form-control">
+                                    <option value="1">Oil</option>
+                                    <option value="2">Filters</option>
+                                    <option>Others</option>
+                                </select>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Number of Cans:</label>
-                                    <input type="number" min="1" id="txtNoOfCans" onchange = "calculateLitres()" class="form-control" placeholder="Number of Cans">
-                                </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input id="datePurchase" type="date" class="form-control" data-date-inline-picker="true">
                             </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Number of Litres:</label>
-                                    <input id="txtNoOfLitres" class="form-control" placeholder="Number of Litres" disabled>
-                                </div>
-                            </div>
-                         </div>
+                        </div>   
+                    </div>   
 
-                         <div class="row">
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Total Quantity: </label>
-                                    <input type="number" min="1" id="txtQuantity" class="form-control" placeholder="Total Quantity">
-                                </div>
+                    <div class="row"> 
+                        <div class="col-lg-6"> 
+                            <div class="form-group">
+                                <label>Product Name: </label>
+                                <input id="txtProductName" class="form-control" placeholder="i.e. Zic Hiflo" required>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Price:</label>
-                                    <input type="number" min="1" id="txtPrice" onchange = "totalPrice()" class="form-control" placeholder="Price of each Piece">
-                                </div>
+                        </div>
+                        <div class="col-lg-6">   
+                            <div class="form-group">
+                                <label>Brand Name:</label>
+                                <select id="selectBrand" class="form-control">
+                                    <option>-Brand-</option>
+                                    <option value="1">Zic</option>
+                                    <option>Shell</option>
+                                    <option>Toyota</option>
+                                    <option>Honda</option>
+                                    <option>Halloween</option>
+                                    <option>Other</option>
+                                </select>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Total Price:</label>
-                                    <input id="txtTotalPrice" class="form-control" placeholder="Total Price" disabled>
-                                </div>
-                            </div>
-                         </div>
-
-                         <div class="row">
-                            <div class="col-lg-12"></div>       
-                         </div>
+                        </div>
+                    </div>
                             
-                         <div class="row">
-                            <div class="col-lg-4">
-                                <button id="btnSubmit" type="submit" class="btn btn-outline btn-primary col-lg-12">Save</button>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Can Size: </label>
+                                <input type="number" min="1" id="txtCanSize" class="form-control" placeholder="Can Size i.e 4L">
                             </div>
-                            <div class="col-lg-4">
-                                <button id="btnClear" type="reset" class="btn btn-outline btn-danger col-lg-12">Clear</button> 
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Number of Cans:</label>
+                                <input type="number" min="1" id="txtNoOfCans" onkeyup="calculateLitres()" class="form-control" placeholder="Number of Cans">
                             </div>
-                         </div>    
-                    </form>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Number of Litres:</label>
+                                <input id="txtNoOfLitres" class="form-control" placeholder="Number of Litres" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Total Quantity: </label>
+                                <input type="number" min="1" id="txtQuantity" class="form-control" placeholder="Total Quantity" disabled>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Price:</label>
+                                <input type="number" min="1" id="txtPrice"  onkeyup="totalPrice()" class="form-control" placeholder="Price of each Piece">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Total Price:</label>
+                                <input id="txtTotalPrice" class="form-control" placeholder="Total Price" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12"></div>       
+                    </div>
+                            
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <button id="btnSubmit" onclick="saveProduct()" class="btn btn-outline btn-primary col-lg-12">Save</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <button id="btnClear" type="reset" class="btn btn-outline btn-danger col-lg-12">Clear</button> 
+                        </div>
+                    </div>    
                 </div>
              <div class="col-lg-1"></div>
           </div>
@@ -456,7 +461,7 @@
 
     <script src="~/Scripts/custom.js"></script>
 
-    <script>
+    @*<script>
             function autocomplete(inp, arr) 
             {
               /*the autocomplete function takes two arguments,
@@ -557,7 +562,7 @@
 
             var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua & Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia & Herzegovina","Botswana","Brazil","British Virgin Islands","Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central Arfrican Republic","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica","Cote D Ivoire","Croatia","Cuba","Curacao","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Falkland Islands","Faroe Islands","Fiji","Finland","France","French Polynesia","French West Indies","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guam","Guatemala","Guernsey","Guinea","Guinea Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Isle of Man","Israel","Italy","Jamaica","Japan","Jersey","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauro","Nepal","Netherlands","Netherlands Antilles","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russia","Rwanda","Saint Pierre & Miquelon","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","St Kitts & Nevis","St Lucia","St Vincent","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor L'Este","Togo","Tonga","Trinidad & Tobago","Tunisia","Turkey","Turkmenistan","Turks & Caicos","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States of America","Uruguay","Uzbekistan","Vanuatu","Vatican City","Venezuela","Vietnam","Virgin Islands (US)","Yemen","Zambia","Zimbabwe"];
             autocomplete(document.getElementById("txtProductName"), countries);
-    </script>
+    </script>*@
         
        
 </body>
