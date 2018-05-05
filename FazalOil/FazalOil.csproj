@@ -170,6 +170,7 @@
     <Content Include="Content\css\plugins\morris.css" />
     <Content Include="Content\css\sb-admin-rtl.css" />
     <Content Include="Content\css\sb-admin.css" />
+    <Content Include="Content\custom.css" />
     <Content Include="data\flot-data.js" />
     <Content Include="data\morris-data.js" />
     <Content Include="dist\css\sb-admin-2.css" />
@@ -430,6 +431,7 @@
     <Content Include="Content\modal\bootstrap.min.css" />
     <Content Include="Content\modal\bootstrap.min.js" />
     <Content Include="Content\modal\jquery.min.js" />
+    <Content Include="Views\Main\LogIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

@@ -18,6 +18,14 @@ function supllier() {
     }
 }
 
+function nextChange() {
+    var currentReading = document.getElementById('txtCurrentReading').value;
+    var expectedKm = document.getElementById('txtExpectedkm').value;
+    var nextChange = document.getElementById('txtNextChange');
+    var result = parseInt(currentReading) + parseInt(expectedKm);
+    nextChange.value = result;
+}
+
 function calculateLitres() {
     var canSize = document.getElementById('txtCanSize').value;
     var numberOfCans = document.getElementById('txtNoOfCans').value;
@@ -103,6 +111,8 @@ function saveProduct() {
         }
     }
     
+    $("#alertdiv").html('<div class="alert alert-warning"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Please wait...</div>');
+
 
     $.ajax({
         url: BASE_URL + ADD_PRODUCT,
@@ -110,7 +120,7 @@ function saveProduct() {
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify(json),
         success:function(data){
-            $("#alertdiv").html('<div class="alert alert-success alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>Successfully added<a href="#" class="alert-link">Status</a>.</div>');
+            $("#alertdiv").html('<div class="alert alert-success">Successfully added</div>');
             $('input').val('');
             $('option').attr('selected', false);
             setTimeout(

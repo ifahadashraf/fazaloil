@@ -34,5 +34,9 @@ namespace FazalOil.Controllers
         {
             return View();
         }
+        public ActionResult LogIn()
+        {
+            return View();
+        }
     }
 }
