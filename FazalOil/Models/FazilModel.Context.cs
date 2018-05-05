@@ -13,10 +13,10 @@ namespace FazalOil.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FazilOilDBEntities : DbContext
+    public partial class FazilOilEntities : DbContext
     {
-        public FazilOilDBEntities()
-            : base("name=FazilOilDBEntities")
+        public FazilOilEntities()
+            : base("name=FazilOilEntities")
         {
         }
     

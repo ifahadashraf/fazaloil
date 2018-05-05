@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8cd0a4a339244688b1580849fa1f7dd2" Name="Diagram1">
+      <Diagram DiagramId="9c7ec6ea656149b1889f33c9dd1d64ab" Name="Diagram1">
         <EntityTypeShape EntityType="FazilModel.Dropoff" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FazilModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="FazilModel.SaleInvoice" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />

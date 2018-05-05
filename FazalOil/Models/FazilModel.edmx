@@ -249,7 +249,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FazilOilDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FazilOilEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Dropoffs" EntityType="Self.Dropoff" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="SaleInvoices" EntityType="Self.SaleInvoice" />
@@ -277,7 +277,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FazilModelStoreContainer" CdmEntityContainer="FazilOilDBEntities">
+        <EntityContainerMapping StorageEntityContainer="FazilModelStoreContainer" CdmEntityContainer="FazilOilEntities">
           <EntitySetMapping Name="Dropoffs">
             <EntityTypeMapping TypeName="FazilModel.Dropoff">
               <MappingFragment StoreEntitySet="Dropoffs">
