@@ -26,6 +26,14 @@ function calculateLitres() {
     numberOfLitres.value = result;
 }
 
+function nextChange() {
+    var currentReading = document.getElementById('txtCurrentReading').value;
+    var expectedKm = document.getElementById('txtExpectedkm').value;
+    var nextChange = document.getElementById('txtNextChange');
+    var result = parseInt(currentReading) + parseInt(expectedKm);
+    nextChange.value = result;
+}
+
 function categories() {
     var category = $("#selectCategory option:selected").text();
     if(category === "Oil")

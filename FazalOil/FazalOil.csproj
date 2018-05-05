@@ -430,6 +430,7 @@
     <Content Include="Content\modal\bootstrap.min.css" />
     <Content Include="Content\modal\bootstrap.min.js" />
     <Content Include="Content\modal\jquery.min.js" />
+    <Content Include="Views\Main\LogIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
